@@ -25,7 +25,7 @@ class CustomTextField extends StatelessWidget {
             return _errormessage(hint);
           }
       },
-      onSaved: onclick,
+      onChanged: onclick,
       obscureText: hint =='Enter your password' ? true : false,
       cursorColor: Colors.deepPurple,
       decoration: InputDecoration(

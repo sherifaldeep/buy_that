@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'provider/modelHud.dart';
 import 'screens/admin/add_product.dart';
 import 'screens/admin/admin_home.dart';
+import 'screens/admin/edit_product.dart';
+import 'screens/admin/manage_product.dart';
 import 'screens/home_page.dart';
 import 'screens/signup_screen.dart';
 import 'package:provider/provider.dart';
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
             HomePage.id:(context)=>HomePage(),
             AdminHome.id:(context)=>AdminHome(),
             AddProduct.id:(context)=>AddProduct(),
+            ManageProduct.id:(context)=>ManageProduct(),
+            EditProduct.id:(context)=>EditProduct(),
           },
        
       ),

@@ -1,4 +1,4 @@
-import 'dart:math';
+
 import 'package:buy_that/provider/modelHud.dart';
 import 'package:buy_that/screens/home_page.dart';
 import 'package:buy_that/widgets/custom_text_field.dart';
@@ -19,7 +19,7 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: kMaincolor,
+      backgroundColor: kMainColor,
       body: ModalProgressHUD(
         color: Colors.deepOrange,
         inAsyncCall: Provider.of<ModelHud>(context).isloading,
@@ -106,7 +106,7 @@ class SignupScreen extends StatelessWidget {
                         _globalKey.currentState.save();
                         try {
                           final authResult =
-                              await _auth.signUp(_email, _password);
+                              await _auth.signUp(_email.trim(), _password.trim());
 
                           modelhud.changeisloading(false);
 
